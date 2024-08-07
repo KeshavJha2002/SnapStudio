@@ -1,2 +1,5 @@
 virt_env
 logs
+images/processed/*
+images/uploads/*
+**/__pycache__/
