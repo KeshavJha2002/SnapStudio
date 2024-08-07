@@ -32,20 +32,16 @@ pip install -r requirements.txt # install all the necessary libraries
 
 ### Backend Structure
 
-backend/
+```code
+..backend/
 ├── apis/
 │   ├── __init__.py
-│   ├── auth.py
 │   ├── images.py
 │   ├── users.py
 │   └── utils.py
 ├── config/
 │   ├── __init__.py
 │   └── settings.py
-├── db/
-│   ├── __init__.py
-│   ├── models.py
-│   └── migrations/
 ├── images/
 │   ├── uploads/
 │   └── processed/
@@ -72,3 +68,5 @@ backend/
 ├── .gitignore
 ├── main.py
 └── requirements.txt
+```
+
