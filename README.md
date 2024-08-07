@@ -12,6 +12,7 @@ git clone https://github.com/KeshavJha2002/SnapStudio.git
 ```bash
 cd frontend
 npm i
+npm run dev
 ```
 
 ### Backend Setup
@@ -24,6 +25,8 @@ apt install python3.10-venv
 python3 -m virt virt_env # create the virtual environment
 source virt_env/bin/activate # run the virtual environment
 pip install -r requirements.txt # install all the necessary libraries
+fastapi dev main.py # to run the server in dev mode
+fastapi run # to run the server in production mode
 ```
 
 ## Project Structure
@@ -69,4 +72,3 @@ pip install -r requirements.txt # install all the necessary libraries
 ├── main.py
 └── requirements.txt
 ```
-
