@@ -1,12 +1,12 @@
 - [x] Spin the server
 - [ ] Establish the connection between client and server 
 - [ ] Image format conversion
-  - [ ] Create the function to convert image
-  - [ ] Create the api for image conversion
-    - [ ] image added to uploaded folder
-    - [ ] image added to processed folder after updates
-    - [ ] processed image sent to the frontend
-    - [ ] test logging
+  - [x] Create the function to convert image
+  - [x] Create the api for image conversion
+    - [x] image added to uploaded folder
+    - [x] image added to processed folder after updates
+    - [x] processed image sent to the frontend
+    - [x] test logging
   - [ ] Create UI for the application
     - [ ] Drop file feature
     - [ ] Upload file feature

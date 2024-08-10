@@ -72,3 +72,7 @@ fastapi run # to run the server in production mode
 ├── main.py
 └── requirements.txt
 ```
+
+### APIs
+
+- `/api/change_format/jpeg` POST
