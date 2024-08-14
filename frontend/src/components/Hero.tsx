@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import ImageCarousel from './ImageCarousel'; 
+import ImageStrip from './ImageStrip'; 
 import UploadArea from './UploadArea';
 
 const Hero: React.FC = () => {
@@ -21,9 +21,9 @@ const Hero: React.FC = () => {
         <div className="p-4 mx-4 border-2 border-dashed border-gray-400 rounded-lg h-[100%]">
           <UploadArea onUpload={handleUpload} />
         </div>
-        {/* Image Carousel */}
+        {/* Image Strip */}
         <div className="p-4">
-          <ImageCarousel images={images} />
+          <ImageStrip images={images} setImages={setImages} />
         </div>
       </div>
       {/* Button Group */}
