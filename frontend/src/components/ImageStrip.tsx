@@ -28,7 +28,7 @@ const ImageStrip: React.FC<ImageStripProps> = ({ images, setImages }) => {
   return (
     <div className="w-full h-[120] flex items-center overflow-x-auto space-x-4 bg-gray-100 p-2 rounded-lg">
       {images.length === 0 ? (
-        <div className="w-full h-full flex items-center justify-center text-gray-400">
+        <div className="w-full h-[100px] flex items-center justify-center text-gray-400">
           No images added yet
         </div>
       ) : (
