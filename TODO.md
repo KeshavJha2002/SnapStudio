@@ -8,9 +8,9 @@
     - [x] processed image sent to the frontend
     - [x] test logging
   - [ ] Create UI for the application
-    - [ ] Drop file feature
-    - [ ] Upload file feature
-    - [ ] Multiple uploads
+    - [x] Drop file feature
+    - [x] Upload file feature
+    - [x] Multiple uploads
     - [ ] Send file to backend
     - [ ] Receive file from backend
     - [ ] Render the file
