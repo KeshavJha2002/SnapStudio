@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Request, HTTPException, UploadFile, File
+from fastapi.middleware.cors import CORSMiddleware
 from typing import Annotated
 from starlette.responses import Response
 from utils import generate_session_id ,setup_image_folder, check_valid_user
@@ -6,6 +7,18 @@ from apis import change_image_format
 from logger import log_event
 
 app = FastAPI()
+
+origins = [
+    "http://localhost:5173",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,  # Allows requests from the specified origins
+    allow_credentials=True,  # Allows cookies to be sent with requests
+    allow_methods=["*"],     # Allows all methods (GET, POST, PUT, etc.)
+    allow_headers=["*"],     # Allows all headers (like Authorization)
+)
 
 @app.post("/api/change_format/{target}/{session_id}")
 async def change_format_api(target: str, session_id: str, files:Annotated[list[UploadFile], File(description="Multiple files as UploadFile")]):
@@ -20,7 +33,7 @@ async def change_format_api(target: str, session_id: str, files:Annotated[list[U
         return {"status": "error", "message": f"An unexpected error occurred: {str(e)}"}
 
 
-@app.get("/")
+@app.get("/api/start-session")
 async def root(request: Request, response: Response):
     session_id = generate_session_id()
     log_event(session_id, f"Client {session_id} connected")
