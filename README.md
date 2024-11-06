@@ -22,7 +22,7 @@ cd backend
 # If the virtual environment is not installed, install it
 # You can use the below command if you are using python3 and above
 apt install python3.10-venv
-python3 -m virt virt_env # create the virtual environment
+python3 -m venv virt_env # create the virtual environment
 source virt_env/bin/activate # run the virtual environment
 pip install -r requirements.txt # install all the necessary libraries
 fastapi dev main.py # to run the server in dev mode
